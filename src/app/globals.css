@@ -1,19 +1,22 @@
 @import 'tailwindcss';
 
-:root {
-}
-
 @theme inline {
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-  }
+  --color-primary: #0d00ff;
 }
 
 body {
-  background: #000;
+  background: var(--color-primary);
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  color: white;
+}
+
+.font-martian-mono {
+  font-family: var(--font-martian-mono), monospace;
+}
+
+/* Custom backdrop blur for better browser support */
+.backdrop-blur-2xl {
+  backdrop-filter: blur(16px);
 }
