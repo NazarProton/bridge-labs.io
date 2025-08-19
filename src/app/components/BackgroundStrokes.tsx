@@ -48,6 +48,67 @@ export default function BackgroundStrokes() {
             }`}
             draggable={false}
           />
+
+          <div className="absolute inset-0 flex items-center justify-center">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className={`absolute left-[calc(50%-240px)] max-[600px]:left-[calc(50%-168px)] max-[450px]:left-[calc(50%-134px)] transition-opacity duration-500 ${
+                isLeftSide ? 'opacity-100' : 'opacity-50'
+              }`}
+            >
+              <g clipPath="url(#clip0_224_643_left)">
+                <path
+                  d="M15.56 5.16005L13.2 2.80005L0 16L13.2 29.2L15.56 26.84L4.72 16L15.56 5.16005Z"
+                  fill="white"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_224_643_left">
+                  <rect width="32" height="32" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <div
+              className={`gradient-border-circle flex flex-col items-center justify-center text-white ${
+                isLeftSide ? 'left-side' : 'right-side'
+              }`}
+            >
+              <div className="text-2xl font-light mb-4">
+                {isLeftSide ? "I'm looking for" : "I'm looking for"}
+              </div>
+              <div className="text-4xl font-bold">
+                {isLeftSide ? 'A TALENT' : 'A PROJECT'}
+              </div>
+            </div>
+
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className={`absolute right-[calc(50%-240px)] max-[600px]:right-[calc(50%-168px)] max-[450px]:right-[calc(50%-134px)] rotate-180 transition-opacity duration-500 ${
+                isLeftSide ? 'opacity-50' : 'opacity-100'
+              }`}
+            >
+              <g clipPath="url(#clip0_224_643_right)">
+                <path
+                  d="M15.56 5.16005L13.2 2.80005L0 16L13.2 29.2L15.56 26.84L4.72 16L15.56 5.16005Z"
+                  fill="white"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_224_643_right">
+                  <rect width="32" height="32" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
         </div>
       </div>
     </div>

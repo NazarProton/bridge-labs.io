@@ -20,3 +20,115 @@ body {
 .backdrop-blur-2xl {
   backdrop-filter: blur(16px);
 }
+
+.gradient-border-circle {
+  width: 384px;
+  height: 384px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(32px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.gradient-border-circle::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 50%;
+  background: linear-gradient(
+    225deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 50%,
+    #ffffff 100%
+  );
+  mask: radial-gradient(circle at center, transparent 191px, black 192px);
+  -webkit-mask: radial-gradient(
+    circle at center,
+    transparent 191px,
+    black 192px
+  );
+  opacity: 1;
+  transition: opacity 500ms ease;
+}
+
+.gradient-border-circle::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 50%,
+    #ffffff 100%
+  );
+  mask: radial-gradient(circle at center, transparent 191px, black 192px);
+  -webkit-mask: radial-gradient(
+    circle at center,
+    transparent 191px,
+    black 192px
+  );
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.gradient-border-circle.left-side::before {
+  opacity: 0;
+}
+
+.gradient-border-circle.left-side::after {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .gradient-border-circle {
+    width: 269px;
+    height: 269px;
+  }
+
+  .gradient-border-circle::before,
+  .gradient-border-circle::after {
+    mask: radial-gradient(circle at center, transparent 133px, black 134px);
+    -webkit-mask: radial-gradient(
+      circle at center,
+      transparent 133px,
+      black 134px
+    );
+  }
+
+  .gradient-border-circle .text-2xl {
+    font-size: 1.25rem;
+  }
+
+  .gradient-border-circle .text-4xl {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .gradient-border-circle {
+    width: 215px;
+    height: 215px;
+  }
+
+  .gradient-border-circle::before,
+  .gradient-border-circle::after {
+    mask: radial-gradient(circle at center, transparent 106px, black 107px);
+    -webkit-mask: radial-gradient(
+      circle at center,
+      transparent 106px,
+      black 107px
+    );
+  }
+
+  .gradient-border-circle .text-2xl {
+    font-size: 1rem;
+  }
+
+  .gradient-border-circle .text-4xl {
+    font-size: 1.5rem;
+  }
+}

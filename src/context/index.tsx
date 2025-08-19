@@ -27,9 +27,6 @@ const modal = createAppKit({
   defaultNetwork: mainnet,
   metadata: metadata,
   excludeWalletIds: ['coinbaseWallet', 'coinbaseWalletSDK'],
-  features: {
-    analytics: true,
-  },
 });
 
 function ContextProvider({
