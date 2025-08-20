@@ -1,14 +1,21 @@
 'use client';
 
-import Navbar from './components/Navbar';
-import BackgroundStrokes from './components/BackgroundStrokes';
+import Navbar from './components/main/heroScreen/Navbar';
+import BackgroundStrokes from './components/main/heroScreen/BackgroundStrokes';
+import ServicesSlider from './components/ServicesSlider';
+import HowItWorksSection from './components/HowItWorksSection';
+import CallToActionSection from './components/CallToActionSection';
+import Footer from './components/Footer';
 import Image from 'next/image';
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen flex flex-col">
+      <div
+        className="flex flex-col"
+        style={{ minHeight: 'calc(100vh - 112px)' }}
+      >
         <div className="flex-1 min-h-0">
           <BackgroundStrokes />
         </div>
@@ -16,10 +23,13 @@ export default function Home() {
         {/* Text section */}
         <div className="w-full max-w-[1510px] mx-auto px-8 py-6 bg-primary">
           <div className="flex flex-col gap-4">
-            <h1 className="text-white font-semibold text-4xl leading-[44px] max-w-[592px]">
-              Web2 Talents meets Web3 Innovations
+            <h1 className="text-white font-semibold text-2xl min-[600px]:text-4xl leading-[100%] ">
+              Web2 Talents meets
             </h1>
-            <p className="text-white font-martian-mono text-sm leading-[150%] max-w-[592px]">
+            <h1 className="text-white font-semibold text-2xl min-[600px]:text-4xl leading-[100%] ">
+              Web3 Innovations
+            </h1>
+            <p className="text-white font-martian-mono text-sm max-[600px]:text-xs leading-[150%] max-w-[592px]">
               The bridge from proven skills to new frontiers
             </p>
             <div className="mt-4">
@@ -34,6 +44,12 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <ServicesSlider />
+
+      <HowItWorksSection />
+      <CallToActionSection />
+      <Footer />
     </>
   );
 }

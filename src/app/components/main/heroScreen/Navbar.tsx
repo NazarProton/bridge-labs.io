@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 p-6">
+    <nav className="p-6">
       <div className="max-w-[1510px] mx-auto flex items-center justify-between">
         <div className="flex items-center">
           <AnimatedLogo />

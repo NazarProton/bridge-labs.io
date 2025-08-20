@@ -6,12 +6,14 @@ interface GlowEffectProps {
   children: ReactNode;
   className?: string;
   intensity?: 'normal' | 'strong';
+  glowSize?: 'small' | 'medium' | 'large';
 }
 
 export default function GlowEffect({
   children,
   className = '',
   intensity = 'normal',
+  glowSize = 'medium',
 }: GlowEffectProps) {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
@@ -35,24 +37,60 @@ export default function GlowEffect({
       ? 'rgba(255, 255, 255, 0.4)'
       : 'rgba(255, 255, 255, 0.25)';
 
+  const getGlowRadius = () => {
+    switch (glowSize) {
+      case 'small':
+        return { main: '100px', border: '100px' };
+      case 'medium':
+        return { main: '400px', border: '200px' };
+      case 'large':
+        return { main: '600px', border: '300px' };
+      default:
+        return { main: '400px', border: '200px' };
+    }
+  };
+
+  const glowRadius = getGlowRadius();
+
+  const paddingClass = glowSize === 'small' ? 'p-[1px]' : 'p-px';
+
   return (
     <div
       ref={containerRef}
-      className={`relative group p-px ${className}`}
+      className={`relative group ${paddingClass} ${className}`}
       onMouseMove={handleMouseMove}
     >
-      <div
-        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        style={{
-          background: `radial-gradient(400px circle at ${mousePos.x}px ${mousePos.y}px, ${glowOpacity}, rgba(147, 51, 234, 0.2) 50%, transparent 80%)`,
-          borderRadius: 'inherit',
-        }}
-      />
+      {/* Постійний border тільки для карточок слайдера */}
+      {glowSize === 'large' && (
+        <div
+          className="absolute inset-0 border border-white/15 rounded-2xl"
+          style={{
+            borderRadius: 'inherit',
+          }}
+        />
+      )}
 
       <div
         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         style={{
-          background: `radial-gradient(200px circle at ${mousePos.x}px ${mousePos.y}px, ${borderGlowOpacity}, transparent 70%)`,
+          background: `radial-gradient(${glowRadius.main} circle at ${
+            mousePos.x
+          }px ${mousePos.y}px, ${glowOpacity}, rgba(147, 51, 234, ${
+            intensity === 'strong' ? '0.4' : '0.2'
+          }) 50%, transparent 80%)`,
+          borderRadius: 'inherit',
+        }}
+      />
+
+      {/* Border глоу для всіх елементів */}
+      <div
+        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        style={{
+          background: `radial-gradient(${glowRadius.border} circle at ${
+            mousePos.x
+          }px ${mousePos.y}px, ${borderGlowOpacity}, transparent ${
+            glowSize === 'large' ? '75%' : '70%'
+          })`,
           maskImage:
             'linear-gradient(black, black) content-box, linear-gradient(black, black)',
           maskComposite: 'xor',

@@ -2,7 +2,7 @@
 
 import { useAppKit } from '@reown/appkit/react';
 import { useAccount } from 'wagmi';
-import GlowEffect from './GlowEffect';
+import GlowEffect from '../../GlowEffect';
 
 export default function ConnectWalletButton() {
   const { open } = useAppKit();

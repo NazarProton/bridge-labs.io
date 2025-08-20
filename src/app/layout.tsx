@@ -1,11 +1,16 @@
 import type { Metadata } from 'next';
-import { Martian_Mono } from 'next/font/google';
+import { Martian_Mono, Inter } from 'next/font/google';
 import { headers } from 'next/headers';
 import './globals.css';
 import ContextProvider from '@/context';
 
 const martianMono = Martian_Mono({
   variable: '--font-martian-mono',
+  subsets: ['latin'],
+});
+
+const inter = Inter({
+  variable: '--font-inter',
   subsets: ['latin'],
 });
 
@@ -26,7 +31,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={` ${martianMono.variable} antialiased`}>
+      <body className={`${inter.variable} ${martianMono.variable} antialiased`}>
         <ContextProvider cookies={cookies}>{children}</ContextProvider>
       </body>
     </html>

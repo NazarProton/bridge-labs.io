@@ -22,8 +22,8 @@ export default function BackgroundStrokes() {
 
   return (
     <div
-      className="w-full select-none max-w-[1510px] mx-auto bg-primary pt-[112px]"
-      style={{ height: 'calc(100vh - 293px)' }}
+      className="w-full select-none max-w-[1510px] mx-auto bg-primary"
+      style={{ height: 'calc(100vh - 112px - 229px)' }}
     >
       <div className="w-full h-full px-8 py-6 relative overflow-hidden">
         <div className="w-full h-full relative">
@@ -78,10 +78,10 @@ export default function BackgroundStrokes() {
                 isLeftSide ? 'left-side' : 'right-side'
               }`}
             >
-              <div className="text-2xl font-light mb-4">
+              <div className=" mb-2">
                 {isLeftSide ? "I'm looking for" : "I'm looking for"}
               </div>
-              <div className="text-4xl font-bold">
+              <div className="text-[32px] min-[600px]:text-[48px] leading-[100%] font-semibold">
                 {isLeftSide ? 'A TALENT' : 'A PROJECT'}
               </div>
             </div>
