@@ -22,8 +22,6 @@ export default function AnimatedLogo() {
   }, []);
   return (
     <Link href='/' className="transition-all duration-0">
-      {/* {currentState === 0 ? <LogoState1 /> : <LogoState2 />} */}
-
       <svg
         width="132"
         height="64"
