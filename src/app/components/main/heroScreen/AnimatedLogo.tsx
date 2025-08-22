@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 const paths = {
@@ -20,7 +21,7 @@ export default function AnimatedLogo() {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="transition-all duration-0">
+    <Link href='/' className="transition-all duration-0">
       {/* {currentState === 0 ? <LogoState1 /> : <LogoState2 />} */}
 
       <svg
@@ -68,6 +69,6 @@ export default function AnimatedLogo() {
           fill="white"
         />
       </svg>
-    </div>
+    </Link>
   );
 }
