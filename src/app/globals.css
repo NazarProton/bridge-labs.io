@@ -205,6 +205,28 @@ button:disabled {
   border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
+/* Embla Carousel стилі */
+.embla {
+  overflow: visible !important;
+  width: 100vw;
+  margin-left: 0;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+.embla__container {
+  display: flex;
+  gap: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 100vw;
+}
+
+.embla__slide {
+  flex: 0 0 auto;
+}
+
 /* Центральний border між кнопками навігації */
 .rounded-l-2xl.relative::after {
   content: '';
@@ -263,4 +285,23 @@ button:disabled {
     padding: 24px;
     gap: 24px;
   }
+}
+
+/* Thin scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  background: rgb(46, 46, 46);
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
 }

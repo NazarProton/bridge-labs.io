@@ -2,12 +2,10 @@ import Link from 'next/link';
 
 export default function WorkPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className=" bg-primary">
       <div className="max-w-[1510px] mx-auto px-6 py-20">
         <div className="text-center mb-16">
-          <h1 className="text-6xl font-bold text-white mb-6">
-            Work With Us
-          </h1>
+          <h1 className="text-6xl font-bold text-white mb-6">Work With Us</h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Find your next opportunity or hire the perfect candidate
           </p>
@@ -23,12 +21,23 @@ export default function WorkPage() {
                 Find a Job
               </h2>
               <p className="text-gray-300 mb-6">
-                Browse through hundreds of opportunities in Web3, DeFi, and blockchain technology
+                Browse through hundreds of opportunities in Web3, DeFi, and
+                blockchain technology
               </p>
               <div className="flex items-center text-blue-400 font-medium group-hover:text-blue-300 transition-all duration-300">
                 Explore Jobs
-                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                <svg
+                  className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
                 </svg>
               </div>
             </div>
@@ -43,12 +52,23 @@ export default function WorkPage() {
                 Hire Talent
               </h2>
               <p className="text-gray-300 mb-6">
-                Post job openings and connect with skilled professionals in the blockchain space
+                Post job openings and connect with skilled professionals in the
+                blockchain space
               </p>
               <div className="flex items-center text-green-400 font-medium group-hover:text-green-300 transition-all duration-300">
                 Post a Job
-                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                <svg
+                  className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
                 </svg>
               </div>
             </div>

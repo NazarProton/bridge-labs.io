@@ -1,11 +1,11 @@
 'use client';
 
-import Navbar from './components/main/heroScreen/Navbar';
-import BackgroundStrokes from './components/main/heroScreen/BackgroundStrokes';
-import ServicesSlider from './components/ServicesSlider';
-import HowItWorksSection from './components/HowItWorksSection';
-import CallToActionSection from './components/CallToActionSection';
-import Footer from './components/Footer';
+import Navbar from '../components/main/heroScreen/Navbar';
+import BackgroundStrokes from '../components/main/heroScreen/BackgroundStrokes';
+import HowItWorksSection from '../components/HowItWorksSection';
+import CallToActionSection from '../components/CallToActionSection';
+import Footer from '../components/global/Footer';
+import ServicesSlider from '../components/ServicesSlider';
 import Image from 'next/image';
 
 export default function Home() {

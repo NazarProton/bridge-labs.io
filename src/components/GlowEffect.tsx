@@ -75,9 +75,9 @@ export default function GlowEffect({
         style={{
           background: `radial-gradient(${glowRadius.main} circle at ${
             mousePos.x
-          }px ${mousePos.y}px, ${glowOpacity}, rgba(147, 51, 234, ${
-            intensity === 'strong' ? '0.4' : '0.2'
-          }) 50%, transparent 80%)`,
+          }px ${mousePos.y}px, ${glowOpacity}, rgba(255, 255, 255, ${
+            intensity === 'strong' ? '0.2' : '0.1'
+          }) 50%, transparent 60%)`,
           borderRadius: 'inherit',
         }}
       />

@@ -2,8 +2,10 @@
 
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function BackgroundStrokes() {
+  const router = useRouter();
   const [mousePosition, setMousePosition] = useState({ x: 0 });
   const [isClient, setIsClient] = useState(false);
 
@@ -20,13 +22,24 @@ export default function BackgroundStrokes() {
 
   const isLeftSide = isClient ? mousePosition.x < window.innerWidth / 2 : false;
 
+  const handleClick = () => {
+    if (isLeftSide) {
+      router.push('/work/hire');
+    } else {
+      router.push('/work/find-job');
+    }
+  };
+
   return (
     <div
-      className="w-full select-none max-w-[1510px] mx-auto bg-primary"
+      className="w-full select-none max-w-[1510px] mx-auto bg-primary cursor-pointer"
       style={{ height: 'calc(100vh - 112px - 229px)' }}
     >
-      <div className="w-full h-full px-8 py-6 relative overflow-hidden">
-        <div className="w-full h-full relative">
+      <div className="w-full h-full px-8 py-6 relative overflow-hidden cursor-pointer">
+        <div
+          className="w-full h-full relative cursor-pointer"
+          onClick={handleClick}
+        >
           <Image
             src="/stroke/storke-rightSide.png"
             alt="stroke-rightSide"

@@ -4,7 +4,13 @@ import { useAppKit } from '@reown/appkit/react';
 import { useAccount } from 'wagmi';
 import GlowEffect from '../../GlowEffect';
 
-export default function ConnectWalletButton() {
+interface ConnectWalletButtonProps {
+  fullWidth?: boolean;
+}
+
+export default function ConnectWalletButton({
+  fullWidth = false,
+}: ConnectWalletButtonProps) {
   const { open } = useAppKit();
   const { isConnected, address } = useAccount();
 
@@ -17,7 +23,10 @@ export default function ConnectWalletButton() {
   };
 
   return (
-    <GlowEffect className="w-[186px] h-14 rounded-[18px]" intensity="strong">
+    <GlowEffect
+      className={`${fullWidth ? 'w-full' : 'w-[186px]'} h-14 rounded-[18px]`}
+      intensity="strong"
+    >
       <div className="w-full h-full">
         <button
           onClick={handleClick}
