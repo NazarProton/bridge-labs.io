@@ -26,23 +26,23 @@ export default function WorkLayout({
                 intensity="strong"
                 glowSize="small"
               >
-                <div className="relative bg-primary border border-white/15 backdrop-blur-2xl rounded-2xl p-1">
+                <div className="relative flex items-center justify-center bg-primary border border-white/15 backdrop-blur-2xl rounded-2xl p-1">
                   {/* Sliding Background */}
                   <div
-                    className={`absolute top-0 w-[166px] h-full bg-black rounded-2xl transition-all duration-300 ease-in-out ${
-                      pathname === '/work/find-job' ? 'left-0' : 'left-[173px]'
+                    className={`absolute top-0 w-1/2 h-full bg-black rounded-2xl transition-all duration-300 ease-in-out ${
+                      pathname === '/work/find-job' ? 'left-0' : 'left-1/2'
                     }`}
                   />
 
                   <Link
                     href="/work/find-job"
-                    className="relative z-10 hover:scale-95 inline-flex items-center justify-center px-6 py-4 w-[166px] h-[56px] text-white font-martian-mono text-sm transition-all duration-300 cursor-pointer"
+                    className="relative z-10 hover:scale-95 inline-flex items-center justify-center w-[140px] min-[410px]:w-[166px] h-[56px] text-white font-martian-mono text-xs min-[382px]:text-sm transition-all duration-300 cursor-pointer"
                   >
                     Find project
                   </Link>
                   <Link
                     href="/work/hire"
-                    className="relative z-10 hover:scale-95 inline-flex items-center justify-center px-6 py-4 w-[166px] h-[56px] text-white font-martian-mono text-sm transition-all duration-300 cursor-pointer"
+                    className="relative z-10 hover:scale-95 inline-flex items-center justify-center w-[140px] min-[410px]:w-[166px] h-[56px] text-white font-martian-mono text-xs min-[382px]:text-sm whitespace-nowrap transition-all duration-300 cursor-pointer"
                   >
                     Find expert
                   </Link>
