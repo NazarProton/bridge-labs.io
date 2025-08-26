@@ -207,12 +207,8 @@ button:disabled {
 
 /* Embla Carousel стилі */
 .embla {
-  overflow: visible !important;
-  width: 100vw;
-  margin-left: 0;
-  position: relative;
-  left: 0;
-  right: 0;
+  width: 100%;
+  overflow: hidden !important;
 }
 
 .embla__container {
@@ -220,7 +216,7 @@ button:disabled {
   gap: 12px;
   padding-left: 8px;
   padding-right: 8px;
-  width: 100vw;
+  width: 100%;
 }
 
 .embla__slide {
