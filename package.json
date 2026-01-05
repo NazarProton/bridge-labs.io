@@ -13,10 +13,9 @@
     "@reown/appkit-adapter-wagmi": "^1.7.19",
     "@tanstack/react-query": "^5.85.3",
     "embla-carousel-react": "^8.6.0",
-    "framer-motion": "^12.23.12",
-    "next": "15.5.0",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
+    "next": "^15.5.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "react-flagkit": "^2.0.4",
     "swiper": "^11.2.10",
     "viem": "^2.34.0",
@@ -25,11 +24,11 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.5.0",
+    "eslint-config-next": "^15.5.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
