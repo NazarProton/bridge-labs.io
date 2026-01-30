@@ -82,7 +82,11 @@ function Footer() {
                     >
                       <div className="flex w-full items-start">
                         <a
-                          href="#top"
+                          href={
+                            label === 'LinkedIn'
+                              ? 'https://www.linkedin.com/company/bridge-labsco/'
+                              : '#top'
+                          }
                           className="flex flex-col justify-center text-[14px] font-normal text-[#64748b] transition-colors duration-200 hover:text-white"
                         >
                           <p className="leading-[20px] whitespace-pre-wrap">
